@@ -13,7 +13,7 @@
         <div class="space-y-4 p-4">
             @if ($title && $withSearch)
                 <div class="pb-4 border-b">
-                    <x-admin.table.title :title="$title" />
+                    <x-blade-ui::table.title :title="$title" />
                 </div>
             @endif
 
@@ -30,7 +30,7 @@
                 @else
                     @if ($title)
                         <div class="flex items-center">
-                            <x-admin.table.title :title="$title" />
+                            <x-blade-ui::table.title :title="$title" />
                         </div>
                     @endif
                 @endif
