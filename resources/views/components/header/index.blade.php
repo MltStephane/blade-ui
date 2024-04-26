@@ -1,6 +1,6 @@
 @props([
     'title' => null,
-    'actions' => null,
+    'actions' => $slot ?? null,
 ])
 
 <div {{ $attributes->merge(['class' => 'border-b border-gray-200 pb-4 sm:pb-6 lg:pb-8 sm:flex sm:items-center sm:justify-between']) }}>
