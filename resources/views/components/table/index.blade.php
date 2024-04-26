@@ -8,7 +8,7 @@
     'paginate' => null,
 ])
 
-<x-card padding="p-0">
+<div class="drop-shadow-md rounded-lg border">
     @if ($title || $withSearch || $actions)
         <div class="space-y-4 p-4">
             @if ($title && $withSearch)
@@ -56,9 +56,9 @@
     </div>
 
 
-    @if (null !== $paginate)
+    @if (null !== $paginate && $paginate->hasPages())
         <div class="w-full border-t border-gray-200 bg-white p-4 rounded-b-lg">
             {{ $paginate->links() }}
         </div>
     @endif
-</x-card>
+</div>
