@@ -16,7 +16,6 @@ class BladeUiServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('blade-ui')
-            ->hasViews()
-        ;
+            ->hasViews();
     }
 }
