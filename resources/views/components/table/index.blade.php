@@ -8,7 +8,7 @@
     'paginate' => null,
 ])
 
-<div class="drop-shadow-md rounded-lg border">
+<div class="drop-shadow-md rounded-lg border dark:border-slate-600">
     @if ($title || $withSearch || $actions)
         <div class="space-y-4 p-4">
             @if ($title && $withSearch)
@@ -50,14 +50,14 @@
     @endif
 
     <div class="rounded-b-lg overflow-x-scroll soft-scrollbar">
-        <table {{ $attributes->class(['min-w-full table-fixed divide-y divide-gray-200 bg-gray-100']) }}>
+        <table {{ $attributes->class(['min-w-full table-fixed divide-y divide-gray-200 dark:divide-gray-600 bg-gray-100 dark:bg-slate-700 rounded-lg']) }}>
             {{ $slot }}
         </table>
     </div>
 
 
     @if (null !== $paginate && $paginate->hasPages())
-        <div class="w-full border-t border-gray-200 bg-white p-4 rounded-b-lg">
+        <div class="w-full border-t border-gray-200 dark:border-gray-600 bg-white dark:bg-slate-700 dark:!text-slate-200 p-4 rounded-b-lg">
             {{ $paginate->links() }}
         </div>
     @endif

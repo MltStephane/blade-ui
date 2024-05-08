@@ -5,7 +5,7 @@
 
 <td
     {{ $attributes->class([
-        'max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 xl:max-w-xs',
+        'max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-slate-200 xl:max-w-xs',
         'flex justify-end gap-2' => $actions,
     ])
 }}>
