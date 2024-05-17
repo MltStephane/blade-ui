@@ -6,7 +6,7 @@
 @if (null !== $webp && null !== $src)
     <picture>
         <source srcset="{{ $webp }}" type="image/webp" />
-        <source srcset="{{ $src }}" type="{{ \MltStephane\BladeUi\ImageMimeTypeService::get($src) }}" />
+        <source srcset="{{ $src }}" type="{{ \MltStephane\BladeUi\Services\ImageMimeTypeService::get($src) }}" />
         <img
             src="{{ $src }}"
             {{ $attributes->merge(['class' => 'w-full object-cover']) }}
