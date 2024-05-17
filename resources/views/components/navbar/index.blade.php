@@ -24,10 +24,10 @@
                 <x-icon name="menu" class="h-6 w-6" />
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-3">
+        <div class="hidden lg:flex lg:gap-x-1">
             {!! $slot !!}
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-1">
             @if(null !== $rightItems)
                 {{ $rightItems }}
             @endif
