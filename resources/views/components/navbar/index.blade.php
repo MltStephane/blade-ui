@@ -8,8 +8,8 @@
     @click.outside="showMobileNavbar = false"
     x-cloak
 >
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-3" aria-label="Global">
-        <div class="flex lg:flex-1">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4" aria-label="Global">
+        <div class="flex lg:flex-1 px-4">
             <a href="{{ route('public.homepage') }}" class="h-full flex items-center justify-center">
                 {{ config('app.name') }}
             </a>
