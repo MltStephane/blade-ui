@@ -50,7 +50,7 @@
                     <x-icon name="x" class="h-6 w-6" />
                 </button>
             </div>
-            <div class="mt-6 flow-root fixed left-4 right-4">
+            <div class="border-t mt-3 flow-root fixed left-0 right-0 p-4 bg-white">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
                         {!! $slot !!}
