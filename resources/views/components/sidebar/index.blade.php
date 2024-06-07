@@ -77,12 +77,10 @@
                 $topBarClasses,
             ]) }}"
         >
-            <button @click="showOnMobile = true" type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden">
+            <x-button @click="showOnMobile = true" type="button" class="lg:hidden" sm>
                 <span class="sr-only">Open sidebar</span>
                 <x-icon name="menu" class="h-6 w-6" />
-            </button>
-
-            <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+            </x-button>
 
             <div class="flex flex-1 gap-x-4 self-stretch items-center justify-between lg:gap-x-6">
                 @if($topbar)
