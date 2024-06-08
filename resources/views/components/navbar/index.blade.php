@@ -1,5 +1,6 @@
 @props([
     'rightItems' => null,
+    'logo' => null,
 ])
 
 <header
@@ -10,9 +11,13 @@
 >
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-4" aria-label="Global">
         <div class="flex lg:flex-1 px-4">
-            <a href="{{ route('public.homepage') }}" class="h-full flex items-center justify-center">
-                {{ config('app.name') }}
-            </a>
+            @if(null !== $logo)
+                {!! $logo !!}
+            @else
+                <a href="{{ route('public.homepage') }}" class="h-full flex items-center justify-center">
+                    {{ config('app.name') }}
+                </a>
+            @endif
         </div>
         <div class="flex lg:hidden">
             <button
@@ -43,9 +48,13 @@
         <div class="fixed inset-0 z-10"></div>
         <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white p-3 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
-                <a href="{{ route('public.homepage') }}" class="h-full flex items-center justify-center">
-                    {{ config('app.name') }}
-                </a>
+                @if(null !== $logo)
+                    {!! $logo !!}
+                @else
+                    <a href="{{ route('public.homepage') }}" class="h-full flex items-center justify-center">
+                        {{ config('app.name') }}
+                    </a>
+                @endif
                 <button @click="showMobileNavbar = false" type="button">
                     <x-icon name="x" class="h-6 w-6" />
                 </button>
