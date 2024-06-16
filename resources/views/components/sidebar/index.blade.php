@@ -1,6 +1,7 @@
 @props([
     'bottom' => null,
     'content' => null,
+    'column' => null,
     'topbar' => null,
     'topBarClasses' => null,
 ])
@@ -89,10 +90,25 @@
             </div>
         </div>
 
-        <main class="p-4 sm:p-6 lg:p-8">
-            @if($content)
+        @if(null !== $column)
+            <div class="grid grid-cols-6">
+                <div class="col-span-1">
+                    <div class="p-4 dark:text-slate-300 bg-white dark:bg-slate-700 dark:border-slate-800 drop-shadow-md border-r h-full min-h-[calc(100vh-4rem)]">
+                        <ul role="list" class="flex flex-1 flex-col space-y-2">
+                            {!! $column !!}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-span-5">
+                    <div class="p-4 sm:p-6 lg:p-8">
+                        {!! $content !!}
+                    </div>
+                </div>
+            </div>
+        @else
+            <div class="p-4 sm:p-6 lg:p-8">
                 {!! $content !!}
-            @endif
-        </main>
+            </div>
+        @endif
     </div>
 </div>
