@@ -93,7 +93,7 @@
         @if(null !== $column)
             <div class="grid grid-cols-6">
                 <div class="col-span-1">
-                    <div class="p-4 dark:text-slate-300 bg-white dark:bg-slate-700 dark:border-slate-800 drop-shadow-md border-r h-full min-h-[calc(100vh-4rem)]">
+                    <div class="p-1 md:p-4 dark:text-slate-300 bg-white dark:bg-slate-700 dark:border-slate-800 drop-shadow-md border-r h-full min-h-[calc(100vh-4rem)]">
                         <ul role="list" class="flex flex-1 flex-col space-y-2">
                             {!! $column !!}
                         </ul>
