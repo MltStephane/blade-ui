@@ -15,7 +15,7 @@
                 <div class="absolute left-full top-0 flex w-16 justify-center pt-5">
                     <button @click="showOnMobile = false" type="button" class="-m-2.5 p-2.5">
                         <span class="sr-only">Close sidebar</span>
-                        <x-icon name="x" class="h-6 w-6 text-white" />
+                        <x-icon name="x-mark" class="h-6 w-6 text-white" />
                     </button>
                 </div>
 
@@ -80,7 +80,7 @@
         >
             <x-button @click="showOnMobile = true" type="button" class="lg:hidden" sm>
                 <span class="sr-only">Open sidebar</span>
-                <x-icon name="menu" class="h-6 w-6" />
+                <x-icon name="bars-3" class="h-6 w-6" />
             </x-button>
 
             <div class="flex flex-1 gap-x-4 self-stretch items-center justify-between lg:gap-x-6">

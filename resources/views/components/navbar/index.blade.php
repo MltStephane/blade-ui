@@ -26,7 +26,7 @@
                 class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
                 <span class="sr-only">Open main menu</span>
-                <x-icon name="menu" class="h-6 w-6" />
+                <x-icon name="bars-3" class="h-6 w-6" />
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-1">
@@ -56,7 +56,7 @@
                     </a>
                 @endif
                 <button @click="showMobileNavbar = false" type="button">
-                    <x-icon name="x" class="h-6 w-6" />
+                    <x-icon name="x-mark" class="h-6 w-6" />
                 </button>
             </div>
             <div class="border-t mt-3 flow-root fixed left-0 right-0 p-4 bg-white">
