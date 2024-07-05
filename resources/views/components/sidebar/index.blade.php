@@ -4,6 +4,7 @@
     'column' => null,
     'topbar' => null,
     'topBarClasses' => null,
+    'hidetopBarOnDesktop' => false,
 ])
 
 <div x-data="{ showOnMobile: false }" x-cloak>
@@ -76,6 +77,7 @@
             class="{{ \TailwindMerge\Laravel\Facades\TailwindMerge::merge([
                 'sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white dark:bg-slate-700 dark:border-slate-800 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8',
                 $topBarClasses,
+                $hidetopBarOnDesktop ? 'md:hidden' : '',
             ]) }}"
         >
             <x-button @click="showOnMobile = true" type="button" class="lg:hidden" sm>
